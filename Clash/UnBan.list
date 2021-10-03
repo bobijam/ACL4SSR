@@ -1,6 +1,10 @@
 # Unbreak 白名单 不应该被广告链接的网站
 
 DOMAIN-SUFFIX,lastpass.com
+DOMAIN-SUFFIX,mediatek.com
+DOMAIN-SUFFIX,ddl.ink
+DOMAIN-SUFFIX,datadirectnet.jp
+DOMAIN-SUFFIX,whamcloud.com
 
 # Epicgames
 DOMAIN-SUFFIX,ol.epicgames.com
