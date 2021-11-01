@@ -49,6 +49,24 @@ proxy-groups:
     type: select
     use:
       - all
+  - name: 延迟最低
+    type: url-test
+    use:
+      - all
+    url: 'http://www.google.com/'
+    interval: 2000
+  - name: 负载均衡
+    type: load-balance
+    use:
+      - all
+    url: 'http://www.google.com'
+    interval: 2000
+  - name: 失败切换
+    type: fallback
+    use:
+      - all
+    url: 'http://www.google.com'
+    interval: 300
   - name: 🇨🇳 中国
     type: url-test
     url: 'http://www.google.com'
@@ -127,24 +145,6 @@ proxy-groups:
     interval: 300
     use:
       - others
-  - name: 延迟最低
-    type: url-test
-    use:
-      - all
-    url: 'http://www.google.com/'
-    interval: 2000
-  - name: 负载均衡
-    type: load-balance
-    use:
-      - all
-    url: 'http://www.google.com'
-    interval: 2000
-  - name: 失败切换
-    type: fallback
-    use:
-      - all
-    url: 'http://www.google.com'
-    interval: 300
 
 proxy-providers:
   au:
