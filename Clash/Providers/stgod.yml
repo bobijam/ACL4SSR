@@ -263,7 +263,6 @@ proxy-providers:
 rules:
   - DOMAIN-SUFFIX,lastpass.com,DIRECT
   - DOMAIN-SUFFIX,mediatek.com,DIRECT
-  - DOMAIN-SUFFIX,ddl.ink,DIRECT
   - DOMAIN-SUFFIX,datadirectnet.jp,DIRECT
   - DOMAIN-SUFFIX,whamcloud.com,DIRECT
   - DOMAIN-SUFFIX,github.com,全局选择
