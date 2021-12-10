@@ -25,7 +25,6 @@ proxy-groups:
     type: select
     proxies:
       - 延迟最低
-      - 选择国家
       - 选择节点
       - 失败切换
       - 负载均衡
@@ -33,24 +32,8 @@ proxy-groups:
     type: url-test
     use:
       - all
-    url: 'http://www.google.com'
+    url: 'http://www.google.com/generate_204'
     interval: 300
-  - name: 选择国家
-    type: select
-    proxies:
-      - 🇨🇳 中国
-      - 🇯🇵 日本
-      - 🇸🇬 新加坡
-      - 🇺🇸 美国
-      - 🇨🇦 加拿大
-      - 🇷🇺 俄罗斯
-      - 🇦🇺 澳大利亚
-      - 🇨🇭 瑞士
-      - 🇩🇪 德国
-      - 🇫🇷 法国
-      - 🇬🇧 英国
-      - 🇳🇱 荷兰
-      - 其他国家
   - name: 选择节点
     type: select
     use:
@@ -59,206 +42,24 @@ proxy-groups:
     type: load-balance
     use:
       - all
-    url: 'http://www.google.com'
+    url: 'http://www.google.com/generate_204'
     interval: 300
   - name: 失败切换
     type: fallback
     use:
       - all
-    url: 'http://www.google.com'
+    url: 'http://www.google.com/generate_204'
     interval: 300
-  - name: 🇨🇳 中国
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - cn
-  - name: 🇯🇵 日本
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - jp
-  - name: 🇸🇬 新加坡
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - sg
-  - name: 🇺🇸 美国
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - us
-  - name: 🇨🇦 加拿大
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - ca
-  - name: 🇷🇺 俄罗斯
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - ru
-  - name: 🇦🇺 澳大利亚
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - au
-  - name: 🇨🇭 瑞士
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - ch
-  - name: 🇩🇪 德国
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - de
-  - name: 🇫🇷 法国
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - fr
-  - name: 🇬🇧 英国
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - gb
-  - name: 🇳🇱 荷兰
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - nl
-  - name: 其他国家
-    type: url-test
-    url: 'http://www.google.com'
-    interval: 300
-    use:
-      - others
 
 proxy-providers:
-  au:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?c=AU"
-    path: hello.stgod.com/provider-au.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
-  cn:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?c=CN,HK,TW"
-    path: hello.stgod.com/provider-cn.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
-  us:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?c=US"
-    path: hello.stgod.com/provider-us.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
-  ca:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?c=CA"
-    path: hello.stgod.com/provider-ca.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
-  jp:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?c=JP"
-    path: hello.stgod.com/provider-jp.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
-  sg:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?c=SG"
-    path: hello.stgod.com/provider-sg.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
-  ru:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?c=RU"
-    path: hello.stgod.com/provider-ru.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
-  ch:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?c=CH"
-    path: hello.stgod.com/provider-ch.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
-  de:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?c=DE"
-    path: hello.stgod.com/provider-de.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
-  fr:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?c=FR"
-    path: hello.stgod.com/provider-fr.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
-  gb:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?c=GB"
-    path: hello.stgod.com/provider-gb.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
-  nl:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?c=NL"
-    path: hello.stgod.com/provider-nl.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
-  others:
-    type: http
-    url: "https://hello.stgod.com/clash/proxies?nc=CN,HK,TW,US,CA,JP,SG,AU,CH,DE,GB,NL,FR,RU"
-    path: hello.stgod.com/provider-others.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com
   all:
     type: http
-    url: "https://hello.stgod.com/clash/proxies"
-    path: hello.stgod.com/provider.yaml
+    url: "https://proxies.bihai.cf/clash/proxies"
+    path: provider.yaml
     health-check:
       enable: true
       interval: 600
-      url: http://www.google.com
+      url: http://www.google.com/generate_204
 
 rules:
   - DOMAIN-SUFFIX,lastpass.com,DIRECT
