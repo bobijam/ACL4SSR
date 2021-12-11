@@ -26,6 +26,7 @@ proxy-groups:
     proxies:
       - 延迟最低
       - 选择节点
+      - 选择国家
       - 失败切换
       - 负载均衡
   - name: 延迟最低
@@ -38,6 +39,14 @@ proxy-groups:
     type: select
     use:
       - all
+  - name: 选择国家
+    type: select
+    proxies:
+      - India
+  - name: India
+    type: select
+    use:
+      - in
   - name: 负载均衡
     type: load-balance
     use:
@@ -56,6 +65,14 @@ proxy-providers:
     type: http
     url: "https://proxies.bihai.cf/clash/proxies"
     path: provider.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.google.com/generate_204
+  in:
+    type: http
+    url: "https://proxies.bihai.cf/clash/proxies?c=IN"
+    path: provider-in.yaml
     health-check:
       enable: true
       interval: 600
