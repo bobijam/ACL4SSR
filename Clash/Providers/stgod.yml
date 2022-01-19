@@ -24,8 +24,8 @@ proxy-groups:
   - name: 全局选择
     type: select
     proxies:
-      - 延迟最低
       - 选择节点
+      - 延迟最低
       - 选择国家
       - 失败切换
       - 负载均衡
@@ -59,7 +59,12 @@ proxy-groups:
       - all
     url: 'http://www.google.com/generate_204'
     interval: 300
-
+  - name: 漏网之鱼
+    type: select
+    proxies:
+      - 选择节点
+      - 延迟最低
+      - DIRECT
 proxy-providers:
   all:
     type: http
@@ -1203,5 +1208,4 @@ rules:
   - DOMAIN,images-cn.ssl-images-amazon.com,DIRECT
   - IP-CIDR,119.28.28.28/32,DIRECT,no-resolve
   - GEOIP,CN,DIRECT
-
-  - MATCH,全局选择
+  - MATCH,漏网之鱼
