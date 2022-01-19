@@ -62,6 +62,7 @@ proxy-groups:
   - name: 漏网之鱼
     type: select
     proxies:
+      - 全局选择
       - 选择节点
       - 延迟最低
       - DIRECT
