@@ -29,16 +29,16 @@ proxy-groups:
       - 选择国家
       - 失败切换
       - 负载均衡
+  - name: 选择节点
+    type: select
+    use:
+      - all
   - name: 延迟最低
     type: url-test
     use:
       - all
     url: 'http://www.google.com/generate_204'
     interval: 300
-  - name: 选择节点
-    type: select
-    use:
-      - all
   - name: 选择国家
     type: select
     proxies:
