@@ -29,6 +29,7 @@ proxy-groups:
       - 选择国家
       - 失败切换
       - 负载均衡
+      - DIRECT
   - name: 选择节点
     type: select
     use:
