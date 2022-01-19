@@ -47,6 +47,7 @@ proxy-groups:
       - Singapore
       - Canada
       - Japan
+      - US
       - India
   - name: HK
     type: select
@@ -64,6 +65,10 @@ proxy-groups:
     type: select
     use:
       - jp
+  - name: US
+    type: select
+    use:
+      - us
   - name: India
     type: select
     use:
@@ -96,14 +101,6 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.google.com/generate_204
-  in:
-    type: http
-    url: "https://proxies.bihai.cf/clash/proxies?c=IN"
-    path: provider-in.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.google.com/generate_204
   hk:
     type: http
     url: "https://proxies.bihai.cf/clash/proxies?c=HK"
@@ -132,6 +129,22 @@ proxy-providers:
     type: http
     url: "https://proxies.bihai.cf/clash/proxies?c=JP"
     path: provider-jp.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.google.com/generate_204
+  us:
+    type: http
+    url: "https://proxies.bihai.cf/clash/proxies?c=US"
+    path: provider-us.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.google.com/generate_204
+  in:
+    type: http
+    url: "https://proxies.bihai.cf/clash/proxies?c=IN"
+    path: provider-in.yaml
     health-check:
       enable: true
       interval: 600
