@@ -26,7 +26,7 @@ proxy-groups:
     proxies:
       - 选择节点
       - 延迟最低
-      - 选择国家
+      - 选择地区
       - 失败切换
       - 负载均衡
       - DIRECT
@@ -40,19 +40,34 @@ proxy-groups:
       - all
     url: 'http://www.google.com/generate_204'
     interval: 300
-  - name: 选择国家
+  - name: 选择地区
     type: select
     proxies:
-      - India
       - HK
-  - name: India
-    type: select
-    use:
-      - in
+      - Singapore
+      - Canada
+      - Japan
+      - India
   - name: HK
     type: select
     use:
       - hk
+  - name: Singapore
+    type: select
+    use:
+      - sg
+  - name: Canada
+    type: select
+    use:
+      - ca
+  - name: Japan
+    type: select
+    use:
+      - jp
+  - name: India
+    type: select
+    use:
+      - in
   - name: 负载均衡
     type: load-balance
     use:
@@ -93,6 +108,30 @@ proxy-providers:
     type: http
     url: "https://proxies.bihai.cf/clash/proxies?c=HK"
     path: provider-hk.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.google.com/generate_204
+  sg:
+    type: http
+    url: "https://proxies.bihai.cf/clash/proxies?c=SG"
+    path: provider-sg.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.google.com/generate_204
+  ca:
+    type: http
+    url: "https://proxies.bihai.cf/clash/proxies?c=CA"
+    path: provider-ca.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.google.com/generate_204
+  jp:
+    type: http
+    url: "https://proxies.bihai.cf/clash/proxies?c=JP"
+    path: provider-jp.yaml
     health-check:
       enable: true
       interval: 600
