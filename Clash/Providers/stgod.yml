@@ -95,7 +95,7 @@ proxy-groups:
 proxy-providers:
   all:
     type: http
-    url: "https://proxies.bihai.cf/clash/proxies"
+    url: "https://proxies.bihai.cf/clash/proxies?c=HK,SG,CA,JP,US,IN"
     path: provider.yaml
     health-check:
       enable: true
