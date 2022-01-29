@@ -83,13 +83,13 @@ proxy-groups:
   - name: Apple
     type: select
     proxies:
-      - 全局选择
       - DIRECT
+      - 全局选择
   - name: Microsoft
     type: select
     proxies:
-      - 全局选择
       - DIRECT
+      - 全局选择
   - name: 漏网之鱼
     type: select
     proxies:
