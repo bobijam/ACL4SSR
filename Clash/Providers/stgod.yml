@@ -56,10 +56,10 @@ proxy-groups:
     type: select
     use:
       - sg
-  - name: Canada
+  - name: CN
     type: select
     use:
-      - ca
+      - cn
   - name: Japan
     type: select
     use:
@@ -100,7 +100,7 @@ proxy-groups:
 proxy-providers:
   all:
     type: http
-    url: "https://proxies.bihai.cf/clash/proxies?c=HK,SG,CA,JP,IN,FR"
+    url: "https://proxies.bihai.cf/clash/proxies?c=HK,SG,CN,JP"
     path: provider.yaml
     health-check:
       enable: true
@@ -122,10 +122,10 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.google.com/generate_204
-  ca:
+  cn:
     type: http
-    url: "https://proxies.bihai.cf/clash/proxies?c=CA"
-    path: provider-ca.yaml
+    url: "https://proxies.bihai.cf/clash/proxies?c=CN"
+    path: provider-cn.yaml
     health-check:
       enable: true
       interval: 600
