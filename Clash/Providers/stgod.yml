@@ -45,7 +45,7 @@ proxy-groups:
     proxies:
       - HK
       - Singapore
-      - Canada
+      - CN
       - Japan
       - India
   - name: HK
