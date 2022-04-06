@@ -152,6 +152,7 @@ rules:
   - DOMAIN-SUFFIX,mediatek.com,DIRECT
   - DOMAIN-SUFFIX,datadirectnet.jp,DIRECT
   - DOMAIN-SUFFIX,whamcloud.com,DIRECT
+  - DOMAIN-SUFFIX,centos.org,DIRECT
   - DOMAIN-SUFFIX,github.com,全局选择
   - DOMAIN-SUFFIX,githubusercontent.com,全局选择
   - DOMAIN-SUFFIX,github.githubassets.com,全局选择
