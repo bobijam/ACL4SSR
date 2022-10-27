@@ -100,7 +100,7 @@ proxy-groups:
 proxy-providers:
   all:
     type: http
-    url: "https://proxies.bihai.cf/clash/proxies?c=HK,SG,CN,JP"
+    url: "https://proxies.bihai.cf/clash/proxies?c=HK,SG,CN,JP,CA"
     path: provider.yaml
     health-check:
       enable: true
