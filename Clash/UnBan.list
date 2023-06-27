@@ -6,15 +6,14 @@ DOMAIN-SUFFIX,datadirectnet.jp
 DOMAIN-SUFFIX,whamcloud.com
 DOMAIN-SUFFIX,centos.org
 
+# Alibaba
+DOMAIN-SUFFIX,simba.taobao.com
+
 # Epicgames
 DOMAIN-SUFFIX,ol.epicgames.com
 
 # Getui
 DOMAIN-SUFFIX,dizhensubao.getui.com
-
-# Google
-DOMAIN,dl.google.com
-DOMAIN-SUFFIX,googletraveladservices.com
 
 # Mozilla
 DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
